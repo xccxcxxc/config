@@ -1,6 +1,6 @@
 
 ;user-agent, ?abc*, proxy
-HOST,msg.71.am,REJECTHOST,msg.71.am,REJECT
+HOST,msg.71.am,REJECT
 
 HOST-SUFFIX,cn,DIRECT
 HOST-SUFFIX,jd.com,DIRECT
