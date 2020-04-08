@@ -1,3 +1,4 @@
+DOMAIN-SUFFIX,googlesyndication.com,reject
 DOMAIN-SUFFIX,cn,direct
 DOMAIN-SUFFIX,jd.com,direct
 DOMAIN-SUFFIX,iosapps.itunes.apple.com,direct
