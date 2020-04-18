@@ -14,6 +14,8 @@ hostname = duckduckgo.com,*.amemv.com,*.iydsj.com,*.k.sohu.com,*.tv.sohu.com,*.k
 ^https:\/\/duckduckgo.com\/\?q=zy\+([^&]+).+ url 302 https://www.amazon.cn/s?k=$1 
 # 京东
 ^https:\/\/duckduckgo.com\/\?q=jd\+([^&]+).+ url 302 https://search.jd.com/Search?keyword=$1&enc=utf-8
+# 知乎
+^https:\/\/duckduckgo.com\/\?q=zh\+([^&]+).+ url 302 https://www.zhihu.com/search?type=content&q=$1 
 # 百度
 ^https:\/\/duckduckgo.com\/\?q=bd\+([^&]+).+ url 302 https://www.baidu.com/s?wd=$1  
 # github
