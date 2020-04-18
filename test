@@ -10,6 +10,8 @@ hostname = duckduckgo.com,*.amemv.com,*.iydsj.com,*.k.sohu.com,*.tv.sohu.com,*.k
 ^https:\/\/duckduckgo.com\/\?q=db\+([^&]+).+ url 302 https://m.douban.com/search/?query=$1 
 # deepl 翻译
 ^https:\/\/duckduckgo.com\/\?q=dl\+([^&]+).+ url 302 https://www.deepl.com/translator#en/zh/$1 
+# 中亚
+^https:\/\/duckduckgo.com\/\?q=zy\+([^&]+).+ url 302 https://www.amazon.cn/s?k=$1 
 # 百度
 ^https:\/\/duckduckgo.com\/\?q=bd\+([^&]+).+ url 302 https://www.baidu.com/s?wd=$1  
 # github
