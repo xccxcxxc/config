@@ -1,0 +1,279 @@
+# port of HTTP
+port: 7890
+
+# port of SOCKS5
+socks-port: 7891
+
+# redir port for Linux and macOS
+# redir-port: 7892
+
+allow-lan: true
+
+
+# Rule / Global/ Direct (default is Rule)
+mode: Rule
+
+# set log level to stdout (default is info)
+# info / warning / error / debug / silent
+log-level: info
+
+# RESTful API for clash
+external-controller: 127.0.0.1:9090
+
+# experimental feature
+experimental:
+  ignore-resolve-fail: true # ignore dns resolve fail, default value is true
+
+
+Proxy:
+
+# shadowsocks
+# The supported ciphers(encrypt methods):
+#   aes-128-gcm aes-192-gcm aes-256-gcm
+#   aes-128-cfb aes-192-cfb aes-256-cfb
+#   aes-128-ctr aes-192-ctr aes-256-ctr
+#   rc4-md5 chacha20 chacha20-ietf xchacha20
+#   chacha20-ietf-poly1305 xchacha20-ietf-poly1305
+- name: "giavmess"
+  type: vmess
+  server: blog.sisier.top
+  port: 443
+  uuid: "64201e9f-a6f2-4d99-abd4-4a85afacb6ba"
+  alterId: 64
+  cipher: auto
+  # udp: true
+  tls: true
+  # skip-cert-verify: true
+  network: ws
+  ws-path: "/wovmess"
+  # ws-headers:
+  Host: blog.sisier.top
+
+
+Proxy Group:
+- name: ProxyAll
+  type: select
+  proxies:   
+    - giavmess
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 300
+
+Rule:
+- DOMAIN-KEYWORD,github,giavmess
+- DOMAIN-SUFFIX,bitbucket.org,giavmess
+- DOMAIN-SUFFIX,4chan.org,giavmess
+- DOMAIN-SUFFIX,google.com,giavmess
+- DOMAIN-KEYWORD,google,giavmess
+- DOMAIN,google.com,giavmess
+- DOMAIN-SUFFIX,ad.com,REJECT
+- IP-CIDR,127.0.0.0/8,DIRECT
+- SRC-IP-CIDR,192.168.1.201/32,DIRECT
+- DST-PORT,80,DIRECT
+- SRC-PORT,7777,DIRECT
+- DOMAIN-KEYWORD,turbobit,giavmess
+- DOMAIN-KEYWORD,feed43,giavmess
+- DOMAIN-KEYWORD,e-hentai,giavmess
+- DOMAIN-SUFFIX,readmoo.com,giavmess
+- DOMAIN,googleads.g.doubleclick.net,REJECT
+- DOMAIN,ads.mopub.com,REJECT
+- DOMAIN,dolphin.ftimg.net,REJECT
+- DOMAIN-SUFFIX,ad.com,REJECT
+- DOMAIN-SUFFIX,bilibili.com,DIRECT
+- DOMAIN-SUFFIX,kochava.com,DIRECT
+- DOMAIN-SUFFIX,amazon.cn,DIRECT
+- DOMAIN-SUFFIX,iosapps.itunes.apple.com,DIRECT
+- DOMAIN-SUFFIX,cn,DIRECT
+- DOMAIN-SUFFIX,itunes.com,DIRECT
+- DOMAIN-SUFFIX,apple.com,DIRECT
+- DOMAIN-SUFFIX,58cdn.com,DIRECT
+- DOMAIN-SUFFIX,smzdm.com,DIRECT
+- DOMAIN-SUFFIX,126.net,DIRECT
+- DOMAIN-SUFFIX,163.com,DIRECT
+- DOMAIN-SUFFIX,alicdn.com,DIRECT
+- DOMAIN-SUFFIX,amap.com,DIRECT
+- DOMAIN-SUFFIX,bdimg.com,DIRECT
+- DOMAIN-SUFFIX,bdstatic.com,DIRECT
+- DOMAIN-SUFFIX,cnbeta.com,DIRECT
+- DOMAIN-SUFFIX,douban.com,DIRECT
+- DOMAIN-SUFFIX,evernote.com,DIRECT
+- DOMAIN-SUFFIX,hao123.com,DIRECT
+- DOMAIN-SUFFIX,haosou.com,DIRECT
+- DOMAIN-SUFFIX,ifeng.com,DIRECT
+- DOMAIN-SUFFIX,iqiyi.com,DIRECT
+- DOMAIN-SUFFIX,lofter.com,DIRECT
+- DOMAIN-SUFFIX,moke.com,DIRECT
+- DOMAIN-SUFFIX,netease.com,DIRECT
+- DOMAIN-SUFFIX,qhimg.com,DIRECT
+- DOMAIN-SUFFIX,sogou.com,DIRECT
+- DOMAIN-SUFFIX,sohu.com,DIRECT
+- DOMAIN-SUFFIX,soso.com,DIRECT
+- DOMAIN-SUFFIX,suning.com,DIRECT
+- DOMAIN-SUFFIX,tmall.com,DIRECT
+- DOMAIN-SUFFIX,tudou.com,DIRECT
+- DOMAIN-SUFFIX,weibo.com,DIRECT
+- DOMAIN-SUFFIX,youku.com,DIRECT
+- DOMAIN-SUFFIX,xunlei.com,DIRECT
+- DOMAIN-SUFFIX,zhihu.com,DIRECT
+- DOMAIN-SUFFIX,zhuishushenqi.com,DIRECT
+- DOMAIN-SUFFIX,crittercism.com,DIRECT
+- DOMAIN-SUFFIX,jiemian.com,DIRECT
+- DOMAIN-SUFFIX,herokuapp.com,DIRECT
+- DOMAIN-SUFFIX,akamaized.net,DIRECT
+- DOMAIN-KEYWORD,alipay,DIRECT
+- DOMAIN-KEYWORD,taobao,DIRECT
+- DOMAIN-KEYWORD,baidu,DIRECT
+- DOMAIN-KEYWORD,360buy,DIRECT
+- DOMAIN-KEYWORD,baidu,DIRECT
+- DOMAIN-KEYWORD,e-hentai,giavmess
+- DOMAIN-KEYWORD,amazon,giavmess
+- DOMAIN-KEYWORD,bbcmedia,giavmess
+- DOMAIN-KEYWORD,bbc,giavmess
+- DOMAIN-KEYWORD,rapidgator,giavmess
+- DOMAIN-SUFFIX,itunes.apple.com,giavmess
+- DOMAIN-SUFFIX,t66y.com,giavmess
+- DOMAIN-SUFFIX,icloud.com,giavmess
+- DOMAIN-SUFFIX,mzstatic.com,giavmess
+- DOMAIN-SUFFIX,tunein.com,giavmess,force-remote-dns
+- DOMAIN-SUFFIX,appsflyer.com,giavmess
+- DOMAIN-SUFFIX,radionomy.com,giavmess,force-remote-dns
+- DOMAIN-SUFFIX,bbc.com,giavmess
+- DOMAIN-SUFFIX,twimg.com,giavmess,force-remote-dns
+- DOMAIN-SUFFIX,kenengba.com,giavmess,force-remote-dns
+- DOMAIN-SUFFIX,commentshk.com,giavmess,force-remote-dns
+- DOMAIN-SUFFIX,evernote.com,giavmess
+- DOMAIN-SUFFIX,wireguard.com,giavmess
+- DOMAIN-SUFFIX,wd-vpn.com,giavmess
+- DOMAIN-SUFFIX,telegram.org,giavmess
+- DOMAIN-SUFFIX,ftchinese.com,giavmess
+- DOMAIN-SUFFIX,amazonaws.com,giavmess
+- DOMAIN-SUFFIX,android.com,giavmess
+- DOMAIN-SUFFIX,angularjs.org,giavmess
+- DOMAIN-SUFFIX,appspot.com,giavmess
+- DOMAIN-SUFFIX,akamaihd.net,giavmess
+- DOMAIN-SUFFIX,amazon.com,giavmess
+- DOMAIN-SUFFIX,apkpure.com,giavmess
+- DOMAIN-SUFFIX,bannedbook.org,giavmess
+- DOMAIN-SUFFIX,bit.ly,giavmess
+- DOMAIN-SUFFIX,bitbucket.org,giavmess
+- DOMAIN-SUFFIX,blog.com,giavmess
+- DOMAIN-SUFFIX,blogcdn.com,giavmess
+- DOMAIN-SUFFIX,blogger.com,giavmess
+- DOMAIN-SUFFIX,blogsmithmedia.com,giavmess
+- DOMAIN-SUFFIX,box.net,giavmess
+- DOMAIN-SUFFIX,bloomberg.com,giavmess
+- DOMAIN-SUFFIX,boxun.com,giavmess
+- DOMAIN-SUFFIX,chromium.org,giavmess
+- DOMAIN-SUFFIX,cl.ly,giavmess
+- DOMAIN-SUFFIX,cloudfront.net,giavmess
+- DOMAIN-SUFFIX,cloudflare.com,giavmess
+- DOMAIN-SUFFIX,cocoapods.org,giavmess
+- DOMAIN-SUFFIX,dribbble.com,giavmess
+- DOMAIN-SUFFIX,dropbox.com,giavmess
+- DOMAIN-SUFFIX,dropboxstatic.com,giavmess
+- DOMAIN-SUFFIX,dropboxusercontent.com,giavmess
+- DOMAIN-SUFFIX,docker.com,giavmess
+- DOMAIN-SUFFIX,duckduckgo.com,giavmess
+- DOMAIN-SUFFIX,digicert.com,giavmess
+- DOMAIN-SUFFIX,dnsimple.com,giavmess
+- DOMAIN-SUFFIX,dwnews.com,giavmess
+- DOMAIN-SUFFIX,edgecastcdn.net,giavmess
+- DOMAIN-SUFFIX,engadget.com,giavmess
+- DOMAIN-SUFFIX,eurekavpt.com,giavmess
+- DOMAIN-SUFFIX,fb.me,giavmess
+- DOMAIN-SUFFIX,fbcdn.net,giavmess
+- DOMAIN-SUFFIX,fc2.com,giavmess
+- DOMAIN-SUFFIX,feedburner.com,giavmess
+- DOMAIN-SUFFIX,fabric.io,giavmess
+- DOMAIN-SUFFIX,flickr.com,giavmess
+- DOMAIN-SUFFIX,fastly.net,giavmess
+- DOMAIN-SUFFIX,ggpht.com,giavmess
+- DOMAIN-SUFFIX,github.com,giavmess
+- DOMAIN-SUFFIX,github.io,giavmess
+- DOMAIN-SUFFIX,githubusercontent.com,giavmess
+- DOMAIN-SUFFIX,golang.org,giavmess
+- DOMAIN-SUFFIX,goo.gl,giavmess
+- DOMAIN-SUFFIX,gstatic.com,giavmess
+- DOMAIN-SUFFIX,godaddy.com,giavmess
+- DOMAIN-SUFFIX,gravatar.com,giavmess
+- DOMAIN-SUFFIX,imageshack.us,giavmess
+- DOMAIN-SUFFIX,imgur.com,giavmess
+- DOMAIN-SUFFIX,jshint.com,giavmess
+- DOMAIN-SUFFIX,ift.tt,giavmess
+- DOMAIN-SUFFIX,j.mp,giavmess
+- DOMAIN-SUFFIX,kat.cr,giavmess
+- DOMAIN-SUFFIX,linode.com,giavmess
+- DOMAIN-SUFFIX,linkedin.com,giavmess
+- DOMAIN-SUFFIX,licdn.com,giavmess
+- DOMAIN-SUFFIX,lithium.com,giavmess
+- DOMAIN-SUFFIX,megaupload.com,giavmess
+- DOMAIN-SUFFIX,mobile01.com,giavmess
+- DOMAIN-SUFFIX,modmyi.com,giavmess
+- DOMAIN-SUFFIX,mzstatic.com,giavmess
+- DOMAIN-SUFFIX,nytimes.com,giavmess
+- DOMAIN-SUFFIX,name.com,giavmess
+- DOMAIN-SUFFIX,nintendo.com,giavmess
+- DOMAIN-SUFFIX,openvpn.net,giavmess
+- DOMAIN-SUFFIX,openwrt.org,giavmess
+- DOMAIN-SUFFIX,doubibackup.com,giavmess
+- DOMAIN-SUFFIX,ow.ly,giavmess
+- DOMAIN-SUFFIX,pinboard.in,giavmess
+- DOMAIN-SUFFIX,giavmessl-images-amazon.com,giavmess
+- DOMAIN-SUFFIX,giavmesstatic.net,giavmess
+- DOMAIN-SUFFIX,ssl-images-amazon.com,giavmess
+- DOMAIN-SUFFIX,sstatic.net,giavmess
+- DOMAIN-SUFFIX,stackoverflow.com,giavmess
+- DOMAIN-SUFFIX,staticflickr.com,giavmess
+- DOMAIN-SUFFIX,squarespace.com,giavmess
+- DOMAIN-SUFFIX,symcd.com,giavmess
+- DOMAIN-SUFFIX,symcb.com,giavmess
+- DOMAIN-SUFFIX,symauth.com,giavmess
+- DOMAIN-SUFFIX,ubnt.com,giavmess
+- DOMAIN-SUFFIX,t.co,giavmess
+- DOMAIN-SUFFIX,thepiratebay.org,giavmess
+- DOMAIN-SUFFIX,tumblr.com,giavmess
+- DOMAIN-SUFFIX,twimg.com,giavmess
+- DOMAIN-SUFFIX,twitch.tv,giavmess
+- DOMAIN-SUFFIX,wikipedia.com,giavmess
+- DOMAIN-SUFFIX,wikipedia.org,giavmess
+- DOMAIN-SUFFIX,wikimedia.org,giavmess
+- DOMAIN-SUFFIX,wordpress.com,giavmess
+- DOMAIN-SUFFIX,wsj.com,giavmess
+- DOMAIN-SUFFIX,wsj.net,giavmess
+- DOMAIN-SUFFIX,wp.com,giavmess
+- DOMAIN-SUFFIX,vsco.co,giavmess
+- DOMAIN-SUFFIX,vimeo.com,giavmess
+- DOMAIN-SUFFIX,youtu.be,giavmess
+- DOMAIN-SUFFIX,ytimg.com,giavmess
+- DOMAIN-SUFFIX,kakao.com,giavmess
+- DOMAIN-SUFFIX,flipboard.com,giavmess
+- DOMAIN-SUFFIX,applefeed.com.tw,giavmess
+- DOMAIN-SUFFIX,buzzorange.com,giavmess
+- DOMAIN-SUFFIX,t66y.com,giavmess
+- DOMAIN-SUFFIX,heroku.com,giavmess
+- DOMAIN-SUFFIX,xvideos.com,giavmess
+- DOMAIN-SUFFIX,rfi.fr,giavmess
+- DOMAIN-SUFFIX,turbobit.net,giavmess
+- DOMAIN-KEYWORD,v2ray,giavmess
+- DOMAIN-KEYWORD,edx-video.net,giavmess
+- DOMAIN-KEYWORD,instagram,giavmess,force-remote-dns
+- DOMAIN-KEYWORD,blogspot,giavmess,force-remote-dns
+- DOMAIN-KEYWORD,google,giavmess,force-remote-dns
+- DOMAIN-KEYWORD,facebook,giavmess,force-remote-dns
+- DOMAIN-KEYWORD,youtube,giavmess,force-remote-dns
+- DOMAIN-KEYWORD,twitter,giavmess,force-remote-dns
+- DOMAIN-KEYWORD,gmail,giavmess,force-remote-dns
+- IP-CIDR,192.168.0.0/16,DIRECT
+- IP-CIDR,10.0.0.0/8,DIRECT
+- IP-CIDR,172.16.0.0/12,DIRECT
+- IP-CIDR,127.0.0.0/8,DIRECT
+- IP-CIDR,91.108.56.0/22,giavmess,no-resolve
+- IP-CIDR,91.108.4.0/22,giavmess,no-resolve
+- IP-CIDR,109.239.140.0/24,giavmess,no-resolve
+- IP-CIDR,149.154.160.0/20,giavmess,no-resolve
+- GEOIP,CN,DIRECT
+- GEOIP,UA,giavmess
+- GEOIP,US,giavmess
+- GEOIP,KR,giavmess
+- GEOIP,TW,giavmess
+- GEOIP,HK,giavmess
+- FINAL,giavmess
