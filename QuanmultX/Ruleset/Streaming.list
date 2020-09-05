@@ -1,105 +1,105 @@
 
   # > Spotify,STREAMING
-  DOMAIN-SUFFIX,pscdn.co,STREAMING
-  DOMAIN-SUFFIX,scdn.co,STREAMING
-  DOMAIN-SUFFIX,spotify.com,STREAMING
-  DOMAIN-SUFFIX,spoti.fi,STREAMING
-  DOMAIN-KEYWORD,spotify.com,STREAMING
-  DOMAIN-KEYWORD,-spotify-com,STREAMING
+  HOST-SUFFIX,pscdn.co,STREAMING
+  HOST-SUFFIX,scdn.co,STREAMING
+  HOST-SUFFIX,spotify.com,STREAMING
+  HOST-SUFFIX,spoti.fi,STREAMING
+  HOST-KEYWORD,spotify.com,STREAMING
+  HOST-KEYWORD,-spotify-com,STREAMING
   # > Amazon Prime Video,STREAMING
   USER-AGENT,com.amazon.avod.thirdp,STREAMING
-  DOMAIN-SUFFIX,aiv-cdn.net,STREAMING
-  DOMAIN-SUFFIX,aiv-delivery.net,STREAMING
-  DOMAIN-SUFFIX,amazonvideo.com,STREAMING
-  DOMAIN-SUFFIX,primevideo.com,STREAMING
-  DOMAIN,avodmp4s3ww-a.akamaihd.net,STREAMING
-  DOMAIN,d25xi40x97liuc.cloudfront.net,STREAMING
-  DOMAIN,dmqdd6hw24ucf.cloudfront.net,STREAMING
-  DOMAIN,dmqdd6hw24ucf.cloudfront.net,STREAMING
-  DOMAIN,d22qjgkvxw22r6.cloudfront.net,STREAMING
-  DOMAIN,d1v5ir2lpwr8os.cloudfront.net,STREAMING
-  DOMAIN-KEYWORD,avoddashs,STREAMING
+  HOST-SUFFIX,aiv-cdn.net,STREAMING
+  HOST-SUFFIX,aiv-delivery.net,STREAMING
+  HOST-SUFFIX,amazonvideo.com,STREAMING
+  HOST-SUFFIX,primevideo.com,STREAMING
+  HOST,avodmp4s3ww-a.akamaihd.net,STREAMING
+  HOST,d25xi40x97liuc.cloudfront.net,STREAMING
+  HOST,dmqdd6hw24ucf.cloudfront.net,STREAMING
+  HOST,dmqdd6hw24ucf.cloudfront.net,STREAMING
+  HOST,d22qjgkvxw22r6.cloudfront.net,STREAMING
+  HOST,d1v5ir2lpwr8os.cloudfront.net,STREAMING
+  HOST-KEYWORD,avoddashs,STREAMING
   # > Apple TV,STREAMING
-  DOMAIN-SUFFIX,tv.apple.com,STREAMING
-  DOMAIN,hls.itunes.apple.com,STREAMING
-  DOMAIN,hls-amt.itunes.apple.com,STREAMING
-  DOMAIN,play-edge.itunes.apple.com,STREAMING
+  HOST-SUFFIX,tv.apple.com,STREAMING
+  HOST,hls.itunes.apple.com,STREAMING
+  HOST,hls-amt.itunes.apple.com,STREAMING
+  HOST,play-edge.itunes.apple.com,STREAMING
   # > BBC iPlayer,STREAMING
   USER-AGENT,bbc.iplayer.android,STREAMING
-  DOMAIN-SUFFIX,bbc.co.uk,STREAMING
-  DOMAIN-SUFFIX,bbci.co.uk,STREAMING
-  DOMAIN-KEYWORD,bbcfmt,STREAMING
-  DOMAIN-KEYWORD,uk-live,STREAMING
+  HOST-SUFFIX,bbc.co.uk,STREAMING
+  HOST-SUFFIX,bbci.co.uk,STREAMING
+  HOST-KEYWORD,bbcfmt,STREAMING
+  HOST-KEYWORD,uk-live,STREAMING
   # > Disney+,STREAMING
   USER-AGENT,com.disney.disneyplus,STREAMING
-  DOMAIN-SUFFIX,disney-plus.net,STREAMING
-  DOMAIN-SUFFIX,disneyplus.com,STREAMING
-  DOMAIN-SUFFIX,dssott.com,STREAMING
-  DOMAIN,cdn.registerdisney.go.com,STREAMING
-  DOMAIN,global.edge.bamgrid.com,STREAMING
+  HOST-SUFFIX,disney-plus.net,STREAMING
+  HOST-SUFFIX,disneyplus.com,STREAMING
+  HOST-SUFFIX,dssott.com,STREAMING
+  HOST,cdn.registerdisney.go.com,STREAMING
+  HOST,global.edge.bamgrid.com,STREAMING
   # > FOX NOW,STREAMING
   USER-AGENT,com.fox.now,STREAMING
-  DOMAIN-SUFFIX,fox.com,STREAMING
-  DOMAIN-SUFFIX,foxdcg.com,STREAMING
-  DOMAIN-SUFFIX,theplatform.com,STREAMING
-  DOMAIN-SUFFIX,uplynk.com,STREAMING
+  HOST-SUFFIX,fox.com,STREAMING
+  HOST-SUFFIX,foxdcg.com,STREAMING
+  HOST-SUFFIX,theplatform.com,STREAMING
+  HOST-SUFFIX,uplynk.com,STREAMING
   # > FOX+,STREAMING
-  DOMAIN-SUFFIX,foxplus.com,STREAMING
-  DOMAIN,cdn-fox-networks-group-green.akamaized.net,STREAMING
-  DOMAIN,d3cv4a9a9wh0bt.cloudfront.net,STREAMING
-  DOMAIN,foxsports01-i.akamaihd.net,STREAMING
-  DOMAIN,foxsports02-i.akamaihd.net,STREAMING
-  DOMAIN,foxsports03-i.akamaihd.net,STREAMING
-  DOMAIN,staticasiafox.akamaized.net,STREAMING
+  HOST-SUFFIX,foxplus.com,STREAMING
+  HOST,cdn-fox-networks-group-green.akamaized.net,STREAMING
+  HOST,d3cv4a9a9wh0bt.cloudfront.net,STREAMING
+  HOST,foxsports01-i.akamaihd.net,STREAMING
+  HOST,foxsports02-i.akamaihd.net,STREAMING
+  HOST,foxsports03-i.akamaihd.net,STREAMING
+  HOST,staticasiafox.akamaized.net,STREAMING
   # > HBO NOW & Max,STREAMING
   USER-AGENT,com.hbo.hbonow,STREAMING
-  DOMAIN-SUFFIX,hbo.com,STREAMING
-  DOMAIN-SUFFIX,hbogo.com,STREAMING
-  DOMAIN-SUFFIX,hbonow.com,STREAMING
-  DOMAIN-SUFFIX,hbomax.com,STREAMING
+  HOST-SUFFIX,hbo.com,STREAMING
+  HOST-SUFFIX,hbogo.com,STREAMING
+  HOST-SUFFIX,hbonow.com,STREAMING
+  HOST-SUFFIX,hbomax.com,STREAMING
   # > HBO GO HKG,STREAMING
   USER-AGENT,hk.hbo.hbogo,STREAMING
-  DOMAIN-SUFFIX,hbogoasia.com,STREAMING
-  DOMAIN-SUFFIX,hbogoasia.hk,STREAMING
-  DOMAIN,bcbolthboa-a.akamaihd.net,STREAMING
-  DOMAIN,players.brightcove.net,STREAMING
-  DOMAIN,s3-ap-southeast-1.amazonaws.com,STREAMING
-  DOMAIN,dai3fd1oh325y.cloudfront.net,STREAMING
-  DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com,STREAMING
-  DOMAIN,hboasia1-i.akamaihd.net,STREAMING
-  DOMAIN,hboasia2-i.akamaihd.net,STREAMING
-  DOMAIN,hboasia3-i.akamaihd.net,STREAMING
-  DOMAIN,hboasia4-i.akamaihd.net,STREAMING
-  DOMAIN,hboasia5-i.akamaihd.net,STREAMING
-  DOMAIN,cf-images.ap-southeast-1.prod.boltdns.net,STREAMING
+  HOST-SUFFIX,hbogoasia.com,STREAMING
+  HOST-SUFFIX,hbogoasia.hk,STREAMING
+  HOST,bcbolthboa-a.akamaihd.net,STREAMING
+  HOST,players.brightcove.net,STREAMING
+  HOST,s3-ap-southeast-1.amazonaws.com,STREAMING
+  HOST,dai3fd1oh325y.cloudfront.net,STREAMING
+  HOST,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com,STREAMING
+  HOST,hboasia1-i.akamaihd.net,STREAMING
+  HOST,hboasia2-i.akamaihd.net,STREAMING
+  HOST,hboasia3-i.akamaihd.net,STREAMING
+  HOST,hboasia4-i.akamaihd.net,STREAMING
+  HOST,hboasia5-i.akamaihd.net,STREAMING
+  HOST,cf-images.ap-southeast-1.prod.boltdns.net,STREAMING
   # > 华文电视,STREAMING
   # USER-AGENT,HWTVMobile*,STREAMING
-  DOMAIN-SUFFIX,5itv.tv,STREAMING
-  DOMAIN-SUFFIX,ocnttv.com,STREAMING
+  HOST-SUFFIX,5itv.tv,STREAMING
+  HOST-SUFFIX,ocnttv.com,STREAMING
   # > ITV,STREAMING
   USER-AGENT,air.ITVMobilePlayer,STREAMING
-  DOMAIN-SUFFIX,itv.com,STREAMING
-  DOMAIN-SUFFIX,itvstatic.com,STREAMING
-  DOMAIN,itvpnpmobile-a.akamaihd.net,STREAMING
+  HOST-SUFFIX,itv.com,STREAMING
+  HOST-SUFFIX,itvstatic.com,STREAMING
+  HOST,itvpnpmobile-a.akamaihd.net,STREAMING
   # > Netflix,STREAMING
   USER-AGENT,com.netflix.mediaclient,STREAMING
-  DOMAIN-SUFFIX,netflix.com,STREAMING
-  DOMAIN-SUFFIX,netflix.net,STREAMING
-  DOMAIN-SUFFIX,nflxext.com,STREAMING
-  DOMAIN-SUFFIX,nflximg.com,STREAMING
-  DOMAIN-SUFFIX,nflximg.net,STREAMING
-  DOMAIN-SUFFIX,nflxso.net,STREAMING
-  DOMAIN-SUFFIX,nflxvideo.net,STREAMING
-  DOMAIN-SUFFIX,netflixdnstest0.com,STREAMING
-  DOMAIN-SUFFIX,netflixdnstest1.com,STREAMING
-  DOMAIN-SUFFIX,netflixdnstest2.com,STREAMING
-  DOMAIN-SUFFIX,netflixdnstest3.com,STREAMING
-  DOMAIN-SUFFIX,netflixdnstest4.com,STREAMING
-  DOMAIN-SUFFIX,netflixdnstest5.com,STREAMING
-  DOMAIN-SUFFIX,netflixdnstest6.com,STREAMING
-  DOMAIN-SUFFIX,netflixdnstest7.com,STREAMING
-  DOMAIN-SUFFIX,netflixdnstest8.com,STREAMING
-  DOMAIN-SUFFIX,netflixdnstest9.com,STREAMING
+  HOST-SUFFIX,netflix.com,STREAMING
+  HOST-SUFFIX,netflix.net,STREAMING
+  HOST-SUFFIX,nflxext.com,STREAMING
+  HOST-SUFFIX,nflximg.com,STREAMING
+  HOST-SUFFIX,nflximg.net,STREAMING
+  HOST-SUFFIX,nflxso.net,STREAMING
+  HOST-SUFFIX,nflxvideo.net,STREAMING
+  HOST-SUFFIX,netflixdnstest0.com,STREAMING
+  HOST-SUFFIX,netflixdnstest1.com,STREAMING
+  HOST-SUFFIX,netflixdnstest2.com,STREAMING
+  HOST-SUFFIX,netflixdnstest3.com,STREAMING
+  HOST-SUFFIX,netflixdnstest4.com,STREAMING
+  HOST-SUFFIX,netflixdnstest5.com,STREAMING
+  HOST-SUFFIX,netflixdnstest6.com,STREAMING
+  HOST-SUFFIX,netflixdnstest7.com,STREAMING
+  HOST-SUFFIX,netflixdnstest8.com,STREAMING
+  HOST-SUFFIX,netflixdnstest9.com,STREAMING
   IP-CIDR,23.246.0.0/18,STREAMING
   IP-CIDR,37.77.184.0/21,STREAMING
   IP-CIDR,45.57.0.0/17,STREAMING
@@ -113,24 +113,24 @@
   IP-CIDR,52.89.124.203/32,STREAMING
   IP-CIDR,54.148.37.5/32,STREAMING
   # > Pornhub,STREAMING
-  DOMAIN-SUFFIX,phncdn.com,STREAMING
-  DOMAIN-SUFFIX,phprcdn.com,STREAMING
-  DOMAIN-SUFFIX,pornhub.com,STREAMING
-  DOMAIN-SUFFIX,pornhubpremium.com,STREAMING
+  HOST-SUFFIX,phncdn.com,STREAMING
+  HOST-SUFFIX,phprcdn.com,STREAMING
+  HOST-SUFFIX,pornhub.com,STREAMING
+  HOST-SUFFIX,pornhubpremium.com,STREAMING
   # > TikTok,STREAMING
   USER-AGENT,com.ss.android.ugc.trill,STREAMING
-  DOMAIN-SUFFIX,byteoversea.com,STREAMING
-  DOMAIN-SUFFIX,ibytedtos.com,STREAMING
-  DOMAIN-SUFFIX,ipstatp.com,STREAMING
-  DOMAIN-SUFFIX,muscdn.com,STREAMING
-  DOMAIN-SUFFIX,musical.ly,STREAMING
-  DOMAIN-SUFFIX,tiktok.com,STREAMING
-  DOMAIN-SUFFIX,tiktokcdn.com,STREAMING
-  DOMAIN-SUFFIX,tiktokv.com,STREAMING
-  DOMAIN-KEYWORD,-tiktokcdn-com,STREAMING
+  HOST-SUFFIX,byteoversea.com,STREAMING
+  HOST-SUFFIX,ibytedtos.com,STREAMING
+  HOST-SUFFIX,ipstatp.com,STREAMING
+  HOST-SUFFIX,muscdn.com,STREAMING
+  HOST-SUFFIX,musical.ly,STREAMING
+  HOST-SUFFIX,tiktok.com,STREAMING
+  HOST-SUFFIX,tiktokcdn.com,STREAMING
+  HOST-SUFFIX,tiktokv.com,STREAMING
+  HOST-KEYWORD,-tiktokcdn-com,STREAMING
   # > YouTube,STREAMING
   USER-AGENT,com.google.android.youtube,STREAMING
   USER-AGENT,com.google.android.youtube.tv,STREAMING
-  DOMAIN-SUFFIX,googlevideo.com,STREAMING
-  DOMAIN-SUFFIX,youtube.com,STREAMING
-  DOMAIN,youtubei.googleapis.com,STREAMING
+  HOST-SUFFIX,googlevideo.com,STREAMING
+  HOST-SUFFIX,youtube.com,STREAMING
+  HOST,youtubei.googleapis.com,STREAMING
